@@ -1,0 +1,137 @@
+/* reset and border-box */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: min(max(13px, 4vw), 20px);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* general styles */
+
+body {
+    font-family: 'Poppins';
+    background-color: hsl(0, 0%, 98%);
+    padding: 5em 2em;
+    
+}
+
+/* header */
+
+.header {
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 3em;
+}
+
+.header h1{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+h1 > span {
+    font-weight: 400;
+}
+
+.header p {
+    font-size: 1em;
+}
+
+span, .header p{
+    color: hsl(229, 6%, 66%);
+}
+
+/* main */
+
+.main h2 {
+    font-size: 1.2em;
+    color: hsl(234, 12%, 34%);
+}
+
+.main p {
+    font-size: 0.9em;
+    color: hsl(229, 6%, 66%);
+}
+
+/* styling items */
+
+.grid-item {
+    border-radius: 1em;
+    box-shadow: -3px 15px 35px -2px rgba(66, 68, 90, 0.14);
+    padding: 1em;
+    max-width: 400px;
+    justify-self: center;
+}
+
+.grid-item > img {
+    float: right;
+    padding: 1em;
+    padding-top: 2em;
+}
+
+.top-color {
+    height: 5px;
+    overflow: hidden;
+    background-color: blue;
+}
+
+/* main grid */
+
+.main {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-rows: 1fr;
+}
+
+
+
+/* media queries */
+
+@media screen and (min-width: 900px){
+    .main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .main{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0;
+    }
+    
+    .item-1 {
+        grid-row: 2 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .item-2 {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
+
+    .item-3 {
+        grid-row: 3 / 5;
+        grid-column: 2 / 3;
+    }
+
+    .item-4 {
+        grid-row: 2 / 4;
+        grid-column: 3 / 4;
+    }
+}
+
+
+
+
+
+
+
+
+
